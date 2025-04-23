@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <style>
+        body {
+            font-family: Arial,Calibri;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+        .nav {
+            background-color: #34495e;
+            overflow: hidden;
+        }
+        .nav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            background-color: #2c3e50;
+        }
+        .content {
+            padding: 20px;
+            min-height: 500px;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <img src="logo.png" alt="Logo" class="logo" />
+            <h1>RIPHAH INTERNATIONAL UNI</h1>
+        </div>
+        <div class="nav">
+            <a href="Default.aspx">Home</a>
+            <a href="Departments.aspx">Departments</a>
+            <a href="Faculty.aspx">Faculty</a>
+            <a href="Contact.aspx">Contact Us</a>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <p>Contact Information</p>
+            <p>Email: riphahinternational@gmail.com</p>
+            <p>Phone: 123456780</p>
+            <p>Address: riphah international i 14</p>
+        </div>
+    </form>
+</body>
+</html>
